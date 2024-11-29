@@ -1,0 +1,159 @@
+/* General Container Styling */
+body {
+    background: linear-gradient(to bottom right, #7ec8e3, #d6eaf3); /* Soft light blue gradient */
+    color: #2c3e50;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #ecf0f1;
+    background: linear-gradient(145deg, #ffffff, #f7f9fc); /* Subtle light background */
+}
+
+/* Header Styling */
+h1, h3 {
+    color: #2c3e50; /* Dark text for contrast */
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+/* Input Section Styling */
+label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    margin-right: 10px;
+    color: #7f8c8d; /* Lighter text for labels */
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid #bdc3c7; /* Soft border color */
+    border-radius: 5px;
+    width: 180px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #3498db;
+    background-color: #ffffff;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #3498db; /* Gentle blue */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+button:hover {
+    background-color: #2980b9; /* Slightly darker blue for hover effect */
+    transform: scale(1.05);
+}
+
+/* SVG Styling for Graph (BST) */
+#svg-container {
+    margin-top: 20px;
+}
+
+#graph-svg {
+    background-color: #ffffff;
+    border: 1px solid #ecf0f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+}
+
+/* Node and Edge Styling */
+.node {
+    fill: #3498db; /* Light blue for nodes */
+    stroke: #ffffff;
+    stroke-width: 2;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.edge {
+    stroke: #bdc3c7;
+    stroke-width: 2;
+}
+
+/* Node Highlighting for BFS */
+.current {
+    fill: #f39c12; /* Soft yellow for current node */
+}
+
+.visited {
+    fill: #16a085; /* Soft teal for visited nodes */
+}
+
+/* Queue and Traversal Sections Styling */
+#queue-section, #traversed-section {
+    margin-top: 20px;
+}
+
+.queue-item, .traversed-item {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #f7f9fc; /* Very light background for items */
+    border: 1px solid #3498db; /* Gentle blue border */
+    border-radius: 5px;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+    color: #bdc3c7;
+}
+
+.fade-out {
+    opacity: 0.5;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    label {
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="number"], button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+}

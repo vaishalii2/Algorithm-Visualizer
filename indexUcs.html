@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCS Visualizer</title>
+    <link rel="stylesheet" href="styleUcs.css">
+</head>
+<body>
+    <div class="container">
+        <h1>UCS Visualizer with Directed Graph</h1>
+        <label for="node-count">Number of Nodes:</label>
+        <input type="number" id="node-count" min="2" max="10" placeholder="Enter nodes (2-10)">
+        <button id="create-graph-button">Create Graph</button>
+
+        <div id="node-inputs" style="display: none;">
+            <h2>Define Connections and Weights</h2>
+            <div id="node-connections-container"></div>
+            <button id="submit-graph-button">Submit Graph</button>
+        </div>
+
+        <svg id="graph-svg" class="graph"></svg>
+
+        <div class="controls">
+            <button id="start-ucs-button" style="display: none;">Start UCS</button>
+            <button id="reset-button">Reset</button>
+        </div>
+
+        <div class="output">
+            <h3>Priority Queue:</h3>
+            <p id="priority-queue"></p>
+            <h3>Visited Nodes:</h3>
+            <p id="visited-nodes"></p>
+        </div>
+    </div>
+
+    <script src="scriptUcs.js"></script>
+</body>
+</html>

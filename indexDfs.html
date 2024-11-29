@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFS Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styleDfs.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DFS Algorithm Visualizer</h1>
+
+        <label for="node-count">Enter number of nodes (1-7):</label>
+        <input type="number" id="node-count" min="1" max="7">
+        <button id="create-graph-button">Create BTree</button>
+
+        <div id="node-values-input" style="display: none;">
+            <h3>Enter node values and connections:</h3>
+            <div id="node-values-container"></div>
+            <button id="submit-values-button">Submit</button>
+        </div>
+
+        <div id="svg-container">
+            <svg id="graph-svg" width="600" height="400"></svg>
+        </div>
+
+        <div id="stack-section">
+            <h3>Queue:</h3>
+            <div id="stack-display"></div>
+        </div>
+
+        <div id="traversed-section">
+            <h3>Traversed Nodes:</h3>
+            <div id="traversed-display"></div>
+        </div>
+
+        <button id="start-button" style="display: none;">Start DFS</button>
+        <button id="reset-button">Reset Graph</button>
+    </div>
+
+    <script src="scriptDfs.js"></script>
+</body>
+</html>
